@@ -12,7 +12,32 @@
         <h1>Portfolio</h1>
     </div>
     <div class="content">
-        <a class="large" href="https://www.github.com/sam-cp">Visit my Github</a>
+        <h1><a target="_blank" href="https://www.github.com/sam-cp">Visit my Github</a></h1>
+        <p>While most of my programming work has been on fairly small personal programs, my GitHub has two repositories with some slightly more involved projects.</p>
+        <p>
+            <strong><a target="_blank" href="https://www.github.com/sam-cp/bigint-cpp">bigint-cpp</a></strong> is a small library I wrote for incorporating arbitrary-precision arithmetic into C++. 
+            In this project, I attempted to leverage fairly simple, yet fast, algorithms for this sort of math, so that C++ can be used to evaluate expressions with numbers larger than 2<sup>64</sup>. 
+            One algorithm in particular that I used here was for exponentiation. Rather than simply multiplying a number by itself some number of times according to the exponent, I used a binary approach, 
+            where I <a target="_blank" href="https://en.wikipedia.org/wiki/Exponentiation_by_squaring">iteratively squared the base</a>, and multiplied the result by this square if the corresponding bit of the exponent was 1 
+            (similar to the <a target="_blank" href="https://en.wikipedia.org/wiki/Modular_exponentiation#Right-to-left_binary_method">modular exponentiation algorithm</a>, just without the modulus). 
+            In the future, I might attempt to implement even faster, more efficient algorithms to make the computations even quicker and easier.
+        </p>
+        <p>
+            <strong><a target="_blank" href="https://www.github.com/sam-cp/deflate">deflate</a></strong> is a C implementation of the <a target="_blank" href="https://en.wikipedia.org/wiki/Deflate">DEFLATE</a> compression algorithm commonly used in ZIP archives. 
+            While at the moment it can only "inflate" (decompress) data, it would be interesting to add compression capability. 
+            The project began when I was reading an ePub file, and noticed that the ePub reader on my Windows machine was not very user-friendly. 
+            I wanted to design a better ePub reader for Windows, but to do this, I needed to understand the format. This led me down the rabbit hole of learning about Huffman coding and the DEFLATE algorithm. 
+            I originally attempted to implement the algorithm in C++, but it was not going well, so I decided to remake it in C, since I assumed it might be more portable that way. 
+            This project has been a great experience in learning to read and implement standards (in this case, <a target="_blank" href="https://datatracker.ietf.org/doc/html/rfc1951">RFC 1951</a>), 
+            as well as in programming in a non-object-oriented language&mdash;even though I still used many object oriented techniques. 
+            There is still a long way to go before this can be a full-fledged ePub reader, but decompressing the files is a good start.
+        </p>
+        <h1>Web Design</h1>
+        <p>
+            My first entrance into the world of programming was through web design. 
+            I custom-made this entire website, using only CSS and (minimal) HTML, as part of a Software Engineering course at Texas A&M. 
+            So if you want to see some of my front-end work, just explore this site!
+        </p>
     </div>
     <div class="sidebar">
         <nav>
