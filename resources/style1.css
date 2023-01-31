@@ -1,0 +1,436 @@
+@font-face {
+	font-family: Nunito Sans;
+	src: url(NunitoSans/NunitoSans-ExtraLight.ttf);
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: Nunito Sans;
+	src: url(NunitoSans/NunitoSans-ExtraLightItalic.ttf);
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Nunito Sans;
+	src: url(NunitoSans/NunitoSans-Light.ttf);
+}
+
+@font-face {
+	font-family: Nunito Sans;
+	src: url(NunitoSans/NunitoSans-LightItalic.ttf);
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Nunito Sans;
+	src: url(NunitoSans/NunitoSans-ExtraBold.ttf);
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: Nunito Sans;
+	src: url(NunitoSans/NunitoSans-ExtraBoldItalic.ttf);
+	font-weight: bold;
+	font-style: italic;
+}
+
+@keyframes floatin-landing {
+	0% {top: 21vh; opacity: 0%}
+	100% {top: 20vh; opacity: 100%}
+}
+
+@keyframes floatin-title-landing {
+	0% {transform: translate(-50%, -35%) scale(102.5%); opacity: 0%}
+	100% {transform: translate(-50%, -35%); opacity: 100%;}
+}
+
+@keyframes floatin-title {
+	0% {transform: translateY(-40%); opacity: 0%}
+	100% {transform: translateY(-50%); opacity: 100%}
+}
+
+@keyframes floatin-nav {
+	0% {transform: translateY(2.5%); opacity: 0%}
+	100% {transform: none; opacity: 100%}
+}
+
+@keyframes floatin-profile {
+	0% {transform: translateY(5%); opacity: 0%}
+	100% {transform: none; opacity: 100%;}
+}
+
+@media screen and (max-width: 13in) {
+	nav#resume {
+		flex-direction: column !important;
+	}
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body:not(.landing) {
+	box-sizing: border-box;
+	position: absolute;
+	margin: 0;
+	overflow-x: hidden;
+	background-color: #f0f0f0;
+	color: #202020;
+	font-family: Nunito Sans, sans-serif;
+	width: 100%;
+}
+
+div.title {
+	background: url(space.png);
+	background-attachment:fixed;
+	background-size: cover;
+	background-position: calc(50vw - max(100vw, 100vh * 8 / 5) / 2) calc(1in - max(100vh, 100vw * 5 / 8) / 2);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2in;
+	user-select: none;
+	color: rgba(255, 255, 255, 75%);
+	padding-left: 0.25in;
+}
+
+div.title::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(24, 48, 96, 25%);
+	z-index: 0;
+}
+
+div.title h1 {
+	position: relative;
+	font-variant-caps: small-caps;
+	display: block;
+	margin: 0;
+	top: 50%;
+	font-size: 48pt;
+	animation: floatin-title 0.8s ease-out forwards;
+	z-index: 1;
+}
+
+div.content {
+	min-height: max(calc(100vh - 3in), 4.75in);
+	top: 2in;
+	left: 0;
+	width: calc(100% - 3.75in);
+	padding: 2.25in 0.25in 0.25in 0.25in;
+}
+
+img#profile {
+	width: 2in;
+	height: 2in;
+	border-radius: 50%;
+	float: right;
+	padding: 0.25in;
+	animation: floatin-profile 0.8s ease-out forwards;
+}
+
+div.content div.textbox {
+	border: 2pt solid #808090;
+	border-radius: 12pt;
+	padding: 9pt;
+	margin: 18pt 2in;
+}
+
+div.content ul {
+	padding-bottom: 3pt;
+}
+
+div.content li {
+	margin: 3pt 0;
+}
+
+div.content a {
+	color: #2070b0;
+	text-decoration: none;
+	transition: 0.1s color;
+}
+
+div.content a:hover {
+	color: #60a0e0;
+}
+
+div.content .large {
+	font-size: 15pt;
+}
+
+nav#resume {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: 0.25in;
+	font-size: 15pt;
+	text-align: center;
+}
+
+nav#resume * {
+	display: block;
+}
+
+div.sidebar {
+	position: absolute;
+	background-color: rgba(96, 160, 255, 25%);
+	top: 0%;
+	left: calc(100% - 3.25in);
+	width: 3.25in;
+	height: calc(100% - 2.5in);
+	padding: 0;
+	padding-top: 2.5in;
+}
+
+div.sidebar nav {
+	position: sticky;
+	width: 100%;
+	top: 0.5in;
+	margin-bottom: 0.5in;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	animation: floatin-nav 0.8s ease-out forwards;
+}
+
+div.sidebar nav a {
+	display: block;
+	font-size: 15pt;
+	text-transform: uppercase;
+	text-decoration: none;
+	flex-basis: 100%;
+	text-align: center;
+	padding: 0.25in 0in;
+	color: rgba(0, 8, 32, 40%);
+	user-select: none;
+}
+
+div.sidebar nav a[href] {
+	transition: color 0.3s;
+	color: rgba(0, 8, 32, 60%);
+}
+
+div.sidebar nav a[href]:hover {
+	color: rgba(0, 8, 32, 100%);
+}
+
+div.sidebar nav a.home::after {
+	content: "Home";
+	display: block;
+	position: relative;
+	top: 50%;
+	transform: scale(100%);
+	transition: transform 0.3s;
+}
+
+div.sidebar nav a.home:hover::after {
+	transform: scale(105%);
+}
+
+div.sidebar nav a span {
+	display: block;
+	position: relative;
+	top: 50%;
+	transform: scale(100%);
+	transition: transform 0.3s;
+}
+
+div.sidebar nav a[href]:hover * {
+	transform: scale(105%);
+}
+
+div.footer {
+	height: 0.5in;
+	width: calc(100% - 3.25in);
+	text-align: center;
+	background-color: #e8e8e8;
+	color: #383838;
+}
+
+div.footer span {
+	position: relative;
+	display: block;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+body.landing {
+	margin: 0;
+	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+	background-image: url(space.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: rgba(255, 255, 255, 80%);
+	font-family: Nunito Sans, sans-serif;
+	font-weight: 200;
+	user-select: none;
+}
+
+body.landing::after {
+	z-index: -1;
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(12, 24, 48, 60%);
+}
+
+div.landing-title {
+	width: 100%;
+	position:absolute;
+	left:0;
+	top:0;
+	height: 20vh;
+}
+
+div.landing-title h1 {
+	position: relative;
+	font-variant-caps: small-caps;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -35%);
+	text-align: center;
+	font-size: min(15vh, 12.5vw);
+	margin: 0px;
+	animation: floatin-title-landing 0.8s ease-out forwards;
+}
+
+div.landing-description {
+	position:absolute;
+	width:66.7%;
+	height: 75vh;
+	left:0%;
+	animation: floatin-landing 0.8s ease-out forwards;
+}
+
+div.landing-description div {
+	position: relative;
+	padding-left: 5%;
+	padding-right: 5%;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+div.landing-description div span {
+	position: relative;
+	display: block;
+	padding: 2.5vh 0;
+	font-size: min(5vh, 2.5vw);
+}
+
+div.landing-description div span:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 0;
+	width: 0;
+	top: 100%;
+	left: 50%;
+	border: 0.75vh solid rgba(224, 240, 255, 50%);
+	border-radius: 25%;
+	transform: rotate(45deg);
+}
+
+div.landing-description::after {
+	content: "";
+	display: block;
+	position: absolute;
+	background-color: rgba(255, 255, 255, 20%);
+	top: 15%;
+	left: 100%;
+	width: 0.2vmax;
+	height: 70%;
+}
+
+div.landing-navigation {
+	position:absolute;
+	width:33.3%;
+	height: 65vh;
+	left:66.7%;
+	animation: floatin-landing 0.8s ease-out forwards;
+	padding: 5vh 0vw;
+}
+
+div.landing-navigation nav {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	height: 90%;
+	text-align:center;
+	transform: translate(-50%, -50%);
+	max-width: 75%;
+	word-wrap: normal;
+}
+
+div.landing-navigation nav a {
+	display: block;
+	flex-basis: 100%;
+	position: relative;
+	text-decoration: none;
+	color:rgba(255, 255, 255, 50%);
+	font-size: min(4vh, 2vw);
+	transition: color 0.3s;
+}
+
+div.landing-navigation nav a:hover {
+	color:rgba(255, 255, 255, 100%);
+}
+
+div.landing-navigation nav a:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	display: block;
+	background-color: rgba(255, 255, 255, 20%);
+	height: 0.15vmax;
+	width: 60%;
+	top: 100%;
+	left: 20%;
+}
+
+div.landing-navigation nav a:hover span {
+	transform: translateY(-50%) scale(105%);
+}
+
+div.landing-navigation nav a span {
+	position: relative;
+	display: block;
+	top: 50%;
+	transition: transform 0.3s;
+	text-transform: lowercase;
+	transform: translateY(-50%) scale(100%);
+}
+
+div.landing-copyright {
+	position: absolute;
+	top: 95vh;
+	width: 100%;
+	height: 5vh;
+	text-align: center;
+}
+
+div.landing-copyright span {
+	position: absolute;
+	font-size: 2vh;
+	left: 50%;
+	top: 50%;
+	width: 100%;
+	transform: translate(-50%, -50%);
+	color: rgba(255, 255, 255, 50%)
+}
+
+
