@@ -139,13 +139,6 @@ img#profile {
 	animation: floatin-profile 0.8s ease-out forwards;
 }
 
-div.content div.textbox {
-	border: 2pt solid #808090;
-	border-radius: 12pt;
-	padding: 9pt;
-	margin: 18pt 1in;
-}
-
 div.content ul {
 	padding-bottom: 3pt;
 }
@@ -300,6 +293,24 @@ div.footer span {
 	display: block;
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+div.footer span input {
+	display: inline;
+	background-color: rgba(56, 56, 56, 0%);
+	height: 24pt;
+	font-size: 10pt;
+	color: rgba(56, 56, 56, 50%);
+	border: 1pt solid rgba(56, 56, 56, 40%);
+	border-radius: 3pt;
+	transition: background-color 0.1s, color 0.1s;
+	cursor: pointer;
+	margin-left: 12pt;
+}
+
+div.footer span input:hover {
+	color: rgba(56, 56, 56, 70%);
+	background-color: rgba(56, 56, 56, 10%);
 }
 
 body.landing {
@@ -475,4 +486,21 @@ div.landing-copyright span {
 	color: rgba(255, 255, 255, 50%)
 }
 
+div.landing-copyright span input {
+	display: inline;
+	background-color: rgba(255, 255, 255, 0%);
+	height: 3vh;
+	font-size: 1.5vh;
+	color: rgba(255, 255, 255, 30%);
+	border: 0.1vh solid rgba(255, 255, 255, 50%);
+	border-radius: 0.5vh;
+	transition: border-color 0.1s, background-color 0.1s, color 0.1s;
+	cursor: pointer;
+	margin-left: 1vw;
+}
 
+div.landing-copyright span input:hover {
+	border-color: rgba(255, 255, 255, 100%);
+	background-color: rgba(255, 255, 255, 15%);
+	color: rgba(255, 255, 255, 80%);
+}

@@ -5,9 +5,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="resources/style1.css"/>
+	<script type="text/javascript" src="resources/togglestylesheets.js"></script>
 	<title>Sam Prewett</title>
 </head>
-<body class="landing">
+<body class="landing" onload="init(false)">
 	<div class="landing-title">
 		<h1>Sam Prewett</h1>
 	</div>
@@ -29,7 +30,7 @@
 		</nav>
 	</div>
 	<div class="landing-copyright">
-		<span>&copy; Sam Prewett 2023 &mdash; All rights reserved.</span>
+		<span>&copy; Sam Prewett 2023 &mdash; All rights reserved. <input type="button" onclick="toggle(false)" value="Toggle Stylesheet"/></span>
 	</div>
 </body>
 </html>
