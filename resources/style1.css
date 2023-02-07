@@ -170,6 +170,10 @@ nav#resume {
 	text-align: center;
 }
 
+::selection {
+	background-color: #0a80c950;
+}
+
 nav#resume * {
 	display: block;
 }
@@ -239,45 +243,37 @@ div.sidebar nav a {
 	font-size: 15pt;
 	text-transform: uppercase;
 	text-decoration: none;
-	flex-basis: 100%;
 	text-align: center;
-	padding: 0.25in 0in;
-	color: rgba(0, 8, 32, 40%);
+	height: 51pt;
+	padding: 0;
+	color: #000840;
+	opacity: 40%;
 	user-select: none;
 }
 
 div.sidebar nav a[href] {
-	transition: color 0.3s;
-	color: rgba(0, 8, 32, 60%);
+	transition: opacity 0.3s;
+	opacity: 60%;
 }
 
 div.sidebar nav a[href]:hover {
-	color: rgba(0, 8, 32, 100%);
+	opacity: 100%;
 }
 
 div.sidebar nav a.home::after {
 	content: "Home";
+}
+
+div.sidebar nav a.home:hover::after, div.sidebar nav a[href]:hover span {
+	transform: translateY(-50%) scale(105%);
+}
+
+div.sidebar nav a.home::after, div.sidebar nav a span {
 	display: block;
 	position: relative;
 	top: 50%;
-	transform: scale(100%);
+	transform: translateY(-50%);
 	transition: transform 0.3s;
-}
-
-div.sidebar nav a.home:hover::after {
-	transform: scale(105%);
-}
-
-div.sidebar nav a span {
-	display: block;
-	position: relative;
-	top: 50%;
-	transform: scale(100%);
-	transition: transform 0.3s;
-}
-
-div.sidebar nav a[href]:hover * {
-	transform: scale(105%);
 }
 
 div.footer {
@@ -299,6 +295,7 @@ div.footer span input {
 	display: inline;
 	background-color: rgba(56, 56, 56, 0%);
 	height: 24pt;
+	font-family: inherit;
 	font-size: 10pt;
 	color: rgba(56, 56, 56, 50%);
 	border: 1pt solid rgba(56, 56, 56, 40%);
@@ -487,6 +484,7 @@ div.landing-copyright span {
 }
 
 div.landing-copyright span input {
+	font-family: inherit;
 	display: inline;
 	background-color: rgba(255, 255, 255, 0%);
 	height: 3vh;
