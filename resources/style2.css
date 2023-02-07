@@ -146,6 +146,11 @@ div.sidebar nav a {
         height: 16.67%;
 		font-size: 15pt;
     }
+
+	div.footer span input {
+		display: block;
+		margin-bottom: 0.25in;
+	}
 }
 
 div.sidebar nav a[href] {
@@ -327,9 +332,9 @@ div.landing-title h1 {
 div.landing-description {
 	position:absolute;
 	width:66.7%;
-	height: 70vh;
+	height: 65vh;
 	left:0%;
-    top: 25vh;
+    top: 30vh;
 }
 
 div.landing-description div {
@@ -364,10 +369,10 @@ div.landing-description::after {
 	display: block;
 	position: absolute;
 	background-color: rgba(255, 255, 255, 20%);
-	top: 20%;
+	top: 10%;
 	left: 100%;
 	width: 0.2vmax;
-	height: 70%;
+	height: 80%;
 }
 
 div.landing-navigation {
@@ -375,8 +380,8 @@ div.landing-navigation {
 	width:33.3%;
 	height: 65vh;
 	left:66.7%;
-    top: 25vh;
-	padding: 5vh 0vw;
+    top: 30vh;
+	padding: 5vh 5vw;
 }
 
 div.landing-navigation nav {
@@ -384,11 +389,9 @@ div.landing-navigation nav {
 	justify-content: space-around;
 	flex-direction: column;
 	position: relative;
-	top: 50%;
-	left: 50%;
-	height: 90%;
+	height: 55vh;
+	width: 56.7vw;
 	text-align:center;
-	transform: translate(-50%, -50%);
 	max-width: 75%;
 	word-wrap: normal;
 }
