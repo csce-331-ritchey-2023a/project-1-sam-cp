@@ -97,8 +97,13 @@ div.sidebar nav a {
 }
 
 @media only screen and (max-width: 7.2in) {
+
+	div.title {
+		height: 1.25in;
+	}
+
 	div.title h1 {
-		font-size: 48pt;
+		font-size: min(48pt, 15vw);
 	}
 
 	img#profile {
@@ -117,6 +122,7 @@ div.sidebar nav a {
 
 	div.content {
 		margin: 18pt 0.25in !important;
+		font-size: 12pt;
 	}
 
 	div.content h1, div.content h2 {
