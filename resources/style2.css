@@ -48,8 +48,8 @@ div.title h1 {
 }
 
 div.sidebar {
-    background-color: #a74444f0;
-	backdrop-filter: blur(3pt);
+    background-color: #a63e3edf;
+	backdrop-filter: blur(5pt);
     position:sticky;
     top: 0;
     height: 54pt;
