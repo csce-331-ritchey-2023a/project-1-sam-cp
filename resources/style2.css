@@ -25,6 +25,7 @@ body {
     margin: 0;
     width: 100%;
     font-size: 14pt;
+	background-color: #f8ece8;
 }
 
 div.title {
@@ -48,6 +49,7 @@ div.title h1 {
 
 div.sidebar {
     background-color: #a74444f0;
+	backdrop-filter: blur(3pt);
     position:sticky;
     top: 0;
     height: 54pt;
@@ -122,7 +124,7 @@ div.sidebar nav a {
 
 	div.content {
 		margin: 18pt 0.25in !important;
-		font-size: 12pt;
+		font-size: 13pt;
 	}
 
 	div.content h1, div.content h2 {
